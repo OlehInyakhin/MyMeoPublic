@@ -1,0 +1,10 @@
+{
+  "something": "Something went wrong",
+  "errorSubmit": "Error occurred while submitting your form. Please try again later.",
+  "errorRequestCompleting": "We're having some trouble completing your request. Please try again.",
+  "tryAgain": "Try again",
+  "loadItems": "Unable to load items",
+  "cannotBeLoaded": "The page cannot be loaded",
+  "failedToLoadContent": "Failed to load content. Please try again.",
+  "authError": "We're having some trouble completing your authorization. Please login again."
+}

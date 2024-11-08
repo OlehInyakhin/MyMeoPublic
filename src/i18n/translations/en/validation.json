@@ -1,0 +1,9 @@
+{
+  "required": "{{entity}} is required",
+  "minLength": "{{entity}} must be at least {{minSize}} characters",
+  "minLengthNum": "{{entity}} must contain {{minSize}} digits",
+  "maxLength": "{{entity}} cannot be longer than {{maxSize}} characters",
+  "email": "Invalid email address",
+  "invalidField": "Invalid {{entity}}",
+  "doNotMatch": "The passwords given do not match."
+}

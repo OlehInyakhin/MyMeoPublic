@@ -1,0 +1,14 @@
+{
+  "title": "MyMeo",
+  "header": {
+    "logIn": "Log in"
+  },
+  "footer": {
+    "rights": "© {{year}} All rights reserved. "
+  },
+  "greetings": "Hi, {{name}}!",
+  "optional": "(optional)",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email"
+}
