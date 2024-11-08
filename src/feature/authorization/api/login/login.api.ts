@@ -1,5 +1,10 @@
 import { api } from '@/api/axios';
-import { LoginPayload, LoginResponse, AuthCallbackResponse, AuthCallbackPayload } from '@/feature/authorization/types';
+import {
+  LoginPayload,
+  LoginResponse,
+  AuthCallbackResponse,
+  AuthCallbackPayload,
+} from '@/feature/authorization/types';
 
 export const loginWithGoogle = async () => {
   const data = await api.get<LoginResponse>('/login');

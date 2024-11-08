@@ -7,9 +7,7 @@ export function PublicLayout(props: PublicLayoutProps) {
   return (
     <div className="w-full flex flex-col min-h-screen justify-between">
       <Header />
-      <div className="px-4 py-12 self-center w-[640px] max-w-full">
-        {children}
-      </div>
+      <div className="px-4 py-12 self-center w-[640px] max-w-full">{children}</div>
       <Footer />
     </div>
   );

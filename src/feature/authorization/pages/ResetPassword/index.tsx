@@ -8,11 +8,7 @@ function ResetPassword() {
   return (
     <>
       <h1>{t('Reset password')}</h1>
-      <Link
-        to={authorization}
-      >
-        {t('Sing in')}
-      </Link>
+      <Link to={authorization}>{t('Sing in')}</Link>
     </>
   );
 }

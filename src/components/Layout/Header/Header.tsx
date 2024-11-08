@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="flex h-16 shrink-0 items-center gap-2">
       <div className="flex w-full items-center gap-2 px-4">
-        <SidebarTrigger className="-ml-1" />
+        <SidebarTrigger className="bg-transparent -ml-1" />
         <Link
           className="mx-auto flex items-center gap-2 text-lg text-inherit"
           to="/"

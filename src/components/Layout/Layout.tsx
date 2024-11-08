@@ -80,13 +80,13 @@ export function Layout(props: LayoutProps) {
     <SidebarProvider>
       <Sidebar variant="inset">
         <SidebarHeader>
-        <SidebarMenu>
+          <SidebarMenu>
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton
                     size="lg"
-                    className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+                    className="bg-transparent data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage
@@ -146,27 +146,21 @@ export function Layout(props: LayoutProps) {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-          <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-            <SidebarGroupLabel>Favorites</SidebarGroupLabel>
-            <SidebarMenu>
-              {data.favorites.map((item) => (
-                <SidebarMenuItem key={item.name}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.name}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-              <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <MoreHorizontal />
-                  <span>More</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroup>
+            <SidebarGroup className="group-data-[collapsible=icon]:hidden">
+              <SidebarGroupLabel>Favorites</SidebarGroupLabel>
+              <SidebarMenu>
+                {data.favorites.map((item) => (
+                  <SidebarMenuItem key={item.name}>
+                    <SidebarMenuButton asChild>
+                      <a href={item.url}>
+                        <item.icon />
+                        <span>{item.name}</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroup>
             <SidebarGroupLabel>Spaces</SidebarGroupLabel>
             <SidebarMenu>
               {data.spaces.map((item) => (
@@ -188,7 +182,7 @@ export function Layout(props: LayoutProps) {
                     {item.items?.length ? (
                       <>
                         <CollapsibleTrigger asChild>
-                          <SidebarMenuAction className="data-[state=open]:rotate-90">
+                          <SidebarMenuAction className="bg-transparent data-[state=open]:rotate-90">
                             <ChevronRight />
                             <span className="sr-only">Toggle</span>
                           </SidebarMenuAction>
@@ -196,7 +190,10 @@ export function Layout(props: LayoutProps) {
                         <CollapsibleContent>
                           <SidebarMenuSub>
                             {item.items?.map((subItem) => (
-                              <SidebarMenuSubItem key={subItem.title} className="relative">
+                              <SidebarMenuSubItem
+                                key={subItem.title}
+                                className="relative"
+                              >
                                 <SidebarMenuSubButton asChild>
                                   <a href={subItem.url}>
                                     <span>{subItem.title}</span>
@@ -204,7 +201,7 @@ export function Layout(props: LayoutProps) {
                                 </SidebarMenuSubButton>
                                 <DropdownMenu>
                                   <DropdownMenuTrigger asChild>
-                                    <SidebarMenuAction showOnHover>
+                                    <SidebarMenuAction className="bg-transparent">
                                       <MoreHorizontal />
                                       <span className="sr-only">More</span>
                                     </SidebarMenuAction>

@@ -18,12 +18,14 @@ export default function Callback() {
       mutateAsync({
         code,
         url: window.location.origin,
-      }).then((data) => {
-        console.log(data);
-      }).catch((err) => {
-        console.error(err);
-        handleRedirect('/');
-      });
+      })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.error(err);
+          handleRedirect('/');
+        });
     }
   }, [code]);
 
